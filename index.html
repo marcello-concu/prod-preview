@@ -9,6 +9,10 @@
   <title>Frontend Mentor | Product preview card component</title>
 
   <link rel="stylesheet" href="./src/css/index.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -17,38 +21,25 @@
 </head>
 <body>
     <main>
-        <div class="prod__img">
-            <img src="./src/images/image-product-mobile.jpg" alt="">
-        </div>
-        <div class="container">
-            <div class="prod__label">
-                <p>p e r f u m e</p>
-            </div>
-            <div class="prod__title">
-                <h1>gabrielle essence</h1>
-                <h1>eau de parfum</h1>
-            </div>
-            <div class="prod__description">
-                <p>A floral, solar and vouptuous</p>
-                <p>interpretation composed by Olivier</p>
-                <p>Polge, Perfurmer-Creator for the House of</p>
-                <p>Chanel</p>
-            </div>
-            <div class="prod__prices">
-                <div class="discount__price">
-                    <p>$149.99</p>
+        <div class="prod__container">
+            <picture class="prod__img">
+                <source srcset="src/images/image-product-desktop.jpg" media="(min-width: 600px)">
+                <img src="src/images/image-product-mobile.jpg" alt="Product">
+            </picture>
+            <div class="prod__content">
+                <p class="prod__category">Perfume</p>
+                <h1 class="prod__title">Gabrielle Essence Eau De Parfum</h1>
+                <p class="prod__description">A floral, solar and vouptuous interpretation composed by Olivier Polge, Perfurmer-Creator for the House of <span>Chanel</span></p>
+                <div class="flex-group">
+                    <p class="prod__price">$149.99</p>
+                    <p class="prod__original-price"><s>$169.99</s></p>
                 </div>
-                <div class="first__price">
-                    <p>$169.99</p>
-                </div>
-            </div>
-            <div class="btn">
-                <button>🛒 Add to Cart</button>
+                <button class="button" data-icon="icon-cart">Add to Cart</button>
             </div>
         </div>
         <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">MConcu</a>.
+            Coded by <a href="https://github.com/marcello-concu">MConcu</a>.
           </div>
     </main>  
 </body>
